@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Zelans</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>ZELANS</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+      <a href="#" title="Преимущества" onclick="slowScroll('#overview')">Преимущества</a>
+      <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+      <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">FAQ</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Программирование</h1>
+    <h3>Как способ жизни!</h3>
+  </div>
+
+
+  <div id="main">
+    <div class="intro">
+      <h2>Наши услуги помогут вам!</h2>
+      <span>Большой выбор всего, что может вам пригодиться</span>
+    </div>
+    <div class="text">
+      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, assumenda optio. A, quod. Esse quae dignissimos eos. Minima saepe ea velit eum dolore eaque amet aut repudiandae voluptatum, sapiente quam.</span>
+    </div>
+  </div>
+  
+  
+  <div id="overview">
+    <h2>Преимущества</h2>
+    <h4>С нами всё проще</h4>
+
+    <div class="img">
+      <img src="img/ruby.jpeg" alt="">
+      <span>Изучение языка Ruby для начинающих</span>
+    </div>
+    <div class="img">
+      <img src="img/photoshop.jpeg" alt="">
+      <span>Уроки PhotoShop для начинающих</span>
+    </div>
+    <div class="img">
+  </div>
+
+  <div id="contacts">
+    <center><h5>Обратная связь</h5></center>
+    <form id="form_input">
+      <label for="name">Имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span></label><br>
+      <input type="email" placeholder="Введите email" name="email" id="email"><br>
+      <label for="message">Сообщение <span>*</span></label><br>
+      <textarea placeholder="Введите вшае сообщение" name="message" id="message"></textarea><br>
+      <div id="mess_send" class="btn">Отправить</div>
+    </form>
+  </div>
+
+
+  <div id="faq">
+    <div>
+      <span class="title">Оплата</span><br>
+      <span class="heading">Как будет происходить оплата?</span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rerum recusandae molestias totam cumque, dolorum expedita quo optio? Dolores sunt doloremque pariatur quis unde, assumenda at impedit modi iste facere.</p>
+      <span class="heading">Как будет происходить оплата?</span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rerum recusandae molestias totam cumque, dolorum expedita quo optio? Dolores sunt doloremque pariatur quis unde, assumenda at impedit modi iste facere.</p>
+      <span class="heading">Как будет происходить оплата?</span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rerum recusandae molestias totam cumque, dolorum expedita quo optio? Dolores sunt doloremque pariatur quis unde, assumenda at impedit modi iste facere.</p>
+    </div>
+    <div>
+      <span class="title">Информация</span><br>
+      <span class="heading">Что входит в услуги сервиса?</span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rerum recusandae molestias totam cumque, dolorum expedita quo optio? Dolores sunt doloremque pariatur quis unde, assumenda at impedit modi iste facere.</p>
+      <span class="heading">Что входит в услуги сервиса?</span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rerum recusandae molestias totam cumque, dolorum expedita quo optio? Dolores sunt doloremque pariatur quis unde, assumenda at impedit modi iste facere.</p>
+      <span class="heading">Что входит в услуги сервиса?</span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rerum recusandae molestias totam cumque, dolorum expedita quo optio? Dolores sunt doloremque pariatur quis unde, assumenda at impedit modi iste facere.</p>
+    </div>
+    <div>
+      <span class="title">Гарантии</span><br>
+      <span class="heading">Какие гарантии есть?</span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rerum recusandae molestias totam cumque, dolorum expedita quo optio? Dolores sunt doloremque pariatur quis unde, assumenda at impedit modi iste facere.</p>
+      <span class="heading">Какие гарантии есть?</span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rerum recusandae molestias totam cumque, dolorum expedita quo optio? Dolores sunt doloremque pariatur quis unde, assumenda at impedit modi iste facere.</p>
+      <span class="heading">Какие гарантии есть?</span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rerum recusandae molestias totam cumque, dolorum expedita quo optio? Dolores sunt doloremque pariatur quis unde, assumenda at impedit modi iste facere.</p>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+
+</body>
+</html>
